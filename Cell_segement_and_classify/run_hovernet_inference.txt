@@ -1,0 +1,1 @@
+python run_infer.py --gpu=0 --nr_types=6 --type_info_path="hover_net/type_info.json" --model _path="hover_net/hovernet_fast_pannuke_type_tf2pytorch.tar" wsi --input_dir="wsi_path" --output_dir="hovernet_infer_output" --cache_path="/Cache"
