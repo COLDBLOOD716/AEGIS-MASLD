@@ -5,9 +5,9 @@ import pandas as pd
 from pathlib import Path
 from tqdm import tqdm
 
-FEATURES_DIR = Path(r"path_to_HE_features")
+FEATURES_DIR = Path(r"path_to_wsi_features")
 OCCLUDE_BASE = Path(r"path_to_occlusion_slide_embed")
-MODEL_DIR = Path(r"path_to_HE_disease_models")
+MODEL_DIR = Path(r"path_to_wsi_disease_models")
 OUTPUT_BASE = Path(r"path_to_output")
 OUTPUT_BASE.mkdir(parents=True, exist_ok=True)
 
