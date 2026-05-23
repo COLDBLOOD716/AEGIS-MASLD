@@ -107,7 +107,7 @@ demo_runs/two_case_demo/dynamic_lifestyle/TEST02.csv
 Place the two-case clinical table in:
 
 ```text
-demo_runs/two_case_demo/clinical/test_clinical_records.csv
+demo_runs/two_case_demo/clinical/TEST_Clinical.csv
 ```
 
 The clinical table must contain one row per patient and an `ID` column. `Feature_fusion/Clinical_fuse.py` expects these columns:
