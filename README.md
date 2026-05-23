@@ -279,6 +279,10 @@ demo_runs/two_case_demo/tissue_clusters/TEST01-HE_spatial_clusters_labeled.pdf
 demo_runs/two_case_demo/tissue_clusters/TEST02-HE_spatial_clusters_labeled.pdf
 ```
 
+![The Tissue Phenotype Clustering Results of TEST01-HE](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/TEST01_Cluster.png?raw=true)
+
+![The Tissue Phenotype Clustering Results of TEST02-HE](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/TEST02_Cluster.png?raw=true)
+
 ## 8. Generate Saliency Heatmaps by Tile Occlusion
 
 First, create leave-one-tile-out slide embeddings. Edit `Saliency_HeatMap/run_tile_occlussion.py`:
