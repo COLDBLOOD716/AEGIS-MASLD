@@ -8,12 +8,12 @@ AEGIS-MASLD is an open-source workflow for MASLD whole-slide image analysis and 
 
 This README gives a step-by-step two-case demo for reviewers and readers. The demo uses the four test slides in `Test_WSIs/`:
 
-- `2020-33977-HE.svs`
-- `2020-33977-SR.svs`
-- `2023-20276-HE.svs`
-- `2023-20276-SR.svs`
+- `TEST01-HE.svs`
+- `TEST01-SR.svs`
+- `TEST02-HE.svs`
+- `TEST02-SR.svs`
 
-The expected patient IDs are `2020-33977` and `2023-20276`.
+The expected patient IDs are `TEST01` and `TEST02`.
 
 ## 1. Environment Setup
 
@@ -79,10 +79,10 @@ for path in [
 
 # Link or copy the provided test slides into the demo folder.
 for name in [
-    "2020-33977-HE.svs",
-    "2020-33977-SR.svs",
-    "2023-20276-HE.svs",
-    "2023-20276-SR.svs",
+    "TEST01-HE.svs",
+    "TEST01-SR.svs",
+    "TEST02-HE.svs",
+    "TEST02-SR.svs",
 ]:
     src = repo / "Test_WSIs" / name
     dst = slide_dir / name
@@ -100,8 +100,8 @@ print(f"Demo workspace: {demo}")
 Place the longitudinal lifestyle CSV files in:
 
 ```text
-demo_runs/two_case_demo/dynamic_lifestyle/2020-33977.csv
-demo_runs/two_case_demo/dynamic_lifestyle/2023-20276.csv
+demo_runs/two_case_demo/dynamic_lifestyle/TEST01.csv
+demo_runs/two_case_demo/dynamic_lifestyle/TEST02.csv
 ```
 
 Place the two-case clinical table in:
@@ -144,12 +144,11 @@ python wsi_inference/run_gigapath.py
 Expected outputs include:
 
 ```text
-demo_runs/two_case_demo/embeddings/all_slides/2020-33977-HE_embed.pt
-demo_runs/two_case_demo/embeddings/all_slides/2020-33977-SR_embed.pt
-demo_runs/two_case_demo/embeddings/all_slides/2023-20276-HE_embed.pt
-demo_runs/two_case_demo/embeddings/all_slides/2023-20276-SR_embed.pt
+demo_runs/two_case_demo/embeddings/all_slides/TEST01-HE_embed.pt
+demo_runs/two_case_demo/embeddings/all_slides/TEST01-SR_embed.pt
+demo_runs/two_case_demo/embeddings/all_slides/TEST02-HE_embed.pt
+demo_runs/two_case_demo/embeddings/all_slides/TEST02-SR_embed.pt
 demo_runs/two_case_demo/embeddings/all_slides/inference_timings.csv
-demo_runs/two_case_demo/tile_features/<slide_id>/<slide_id>_tile_outputs.pt
 demo_runs/two_case_demo/tile_features/<slide_id>/<slide_id>_tile_coords.csv
 ```
 
@@ -195,8 +194,8 @@ python Feature_fusion/Dual_stain_fuse.py
 Expected outputs:
 
 ```text
-demo_runs/two_case_demo/fused_dual_stain/2020-33977-Fused_embed.pt
-demo_runs/two_case_demo/fused_dual_stain/2023-20276-Fused_embed.pt
+demo_runs/two_case_demo/fused_dual_stain/TEST01-Fused_embed.pt
+demo_runs/two_case_demo/fused_dual_stain/TEST02-Fused_embed.pt
 demo_runs/two_case_demo/fused_dual_stain/contribution_records.csv
 ```
 
@@ -219,8 +218,8 @@ python Feature_fusion/Clinical_fuse.py
 Expected outputs:
 
 ```text
-demo_runs/two_case_demo/static_multimodal/2020-33977-StaticMultimodal.pt
-demo_runs/two_case_demo/static_multimodal/2023-20276-StaticMultimodal.pt
+demo_runs/two_case_demo/static_multimodal/TEST01-StaticMultimodal.pt
+demo_runs/two_case_demo/static_multimodal/TEST02-StaticMultimodal.pt
 ```
 
 ## 6. Run Multi-Outcome Prediction
@@ -248,8 +247,8 @@ python Trans-LSTM_model/predict_with_Trans-LSTM.py
 Expected prediction outputs:
 
 ```text
-demo_runs/two_case_demo/predictions/2020-33977_pred.csv
-demo_runs/two_case_demo/predictions/2023-20276_pred.csv
+demo_runs/two_case_demo/predictions/TEST01_pred.csv
+demo_runs/two_case_demo/predictions/TEST02_pred.csv
 demo_runs/two_case_demo/predictions/pred_15yr_summary.csv
 demo_runs/two_case_demo/predictions/summary_15yr_prevalence.csv
 ```
@@ -276,10 +275,8 @@ Expected visualization outputs:
 
 ```text
 demo_runs/two_case_demo/tissue_clusters/global_tiles_umap_labeled.pdf
-demo_runs/two_case_demo/tissue_clusters/2020-33977-HE_spatial_clusters_labeled.pdf
-demo_runs/two_case_demo/tissue_clusters/2020-33977-SR_spatial_clusters_labeled.pdf
-demo_runs/two_case_demo/tissue_clusters/2023-20276-HE_spatial_clusters_labeled.pdf
-demo_runs/two_case_demo/tissue_clusters/2023-20276-SR_spatial_clusters_labeled.pdf
+demo_runs/two_case_demo/tissue_clusters/TEST01-HE_spatial_clusters_labeled.pdf
+demo_runs/two_case_demo/tissue_clusters/TEST02-HE_spatial_clusters_labeled.pdf
 ```
 
 ## 8. Generate Saliency Heatmaps by Tile Occlusion
@@ -377,8 +374,8 @@ demo_runs/two_case_demo/cell_segmentation
 After completing the demo, reviewers should be able to inspect:
 
 ```text
-demo_runs/two_case_demo/predictions/2020-33977_pred.csv
-demo_runs/two_case_demo/predictions/2023-20276_pred.csv
+demo_runs/two_case_demo/predictions/TEST01_pred.csv
+demo_runs/two_case_demo/predictions/TEST02_pred.csv
 demo_runs/two_case_demo/predictions/pred_15yr_summary.csv
 demo_runs/two_case_demo/tissue_clusters/global_tiles_umap_labeled.pdf
 demo_runs/two_case_demo/tissue_clusters/*_spatial_clusters_labeled.pdf
