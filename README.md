@@ -347,6 +347,11 @@ demo_runs/two_case_demo/saliency_heatmaps/<slide_id>/<slide_id>_prob_deltas_HCC.
 demo_runs/two_case_demo/saliency_heatmaps/<slide_id>/<slide_id>_occlusion_HCC.pdf
 ```
 
+![The Saliency Heatmaps of TEST01-HE](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Heatmap_TEST01-HE.jpg?raw=true)
+![The Saliency Heatmaps of TEST01-SR](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Heatmap_TEST01-SR.jpg?raw=true)
+![The Saliency Heatmaps of TEST02-HE](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Heatmap_TEST02-HE.jpg?raw=true)
+![The Saliency Heatmaps of TEST02-SR](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Heatmap_TEST02-SR.jpg?raw=true)
+
 ## 9. Run Cell Segmentation and Classification
 
 The cell module uses Hover-Net. Make sure the `hover_net` dependency folder, `type_info.json`, and pretrained weights are available under `Cell_segement_and_classify/`.
@@ -372,6 +377,7 @@ Typical outputs include cell instance maps, classified nuclei/cell annotations, 
 ```text
 demo_runs/two_case_demo/cell_segmentation
 ```
+![The Celltype Example](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Celltype.jpg?raw=true)
 
 ## 10. Minimal Output Checklist
 
