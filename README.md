@@ -279,8 +279,14 @@ demo_runs/two_case_demo/tissue_clusters/TEST01-HE_spatial_clusters_labeled.pdf
 demo_runs/two_case_demo/tissue_clusters/TEST02-HE_spatial_clusters_labeled.pdf
 ```
 
+```text
+The Tissue Phenotype Clustering Results of TEST01-HE:
+```
 ![The Tissue Phenotype Clustering Results of TEST01-HE](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/TEST01_Cluster.png?raw=true)
 
+```text
+The Tissue Phenotype Clustering Results of TEST02-HE:
+```
 ![The Tissue Phenotype Clustering Results of TEST02-HE](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/TEST02_Cluster.png?raw=true)
 
 ## 8. Generate Saliency Heatmaps by Tile Occlusion
@@ -347,9 +353,21 @@ demo_runs/two_case_demo/saliency_heatmaps/<slide_id>/<slide_id>_prob_deltas_HCC.
 demo_runs/two_case_demo/saliency_heatmaps/<slide_id>/<slide_id>_occlusion_HCC.pdf
 ```
 
+```text
+The Saliency Heatmap Example of TEST01-HE:
+```
 ![The Saliency Heatmaps of TEST01-HE](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Heatmap_TEST01-HE.jpg?raw=true)
+```text
+The Saliency Heatmap Example of TEST01-SR:
+```
 ![The Saliency Heatmaps of TEST01-SR](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Heatmap_TEST01-SR.jpg?raw=true)
+```text
+The Saliency Heatmap Example of TEST02-HE:
+```
 ![The Saliency Heatmaps of TEST02-HE](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Heatmap_TEST02-HE.jpg?raw=true)
+```text
+The Saliency Heatmap Example of TEST02-SR:
+```
 ![The Saliency Heatmaps of TEST02-SR](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Heatmap_TEST02-SR.jpg?raw=true)
 
 ## 9. Run Cell Segmentation and Classification
@@ -376,6 +394,10 @@ Typical outputs include cell instance maps, classified nuclei/cell annotations, 
 
 ```text
 demo_runs/two_case_demo/cell_segmentation
+```
+
+```text
+The Cell Segmentation and Classification Example:
 ```
 ![The Celltype Example](https://github.com/COLDBLOOD716/AEGIS-MASLD/blob/main/images/Celltype.jpg?raw=true)
 
