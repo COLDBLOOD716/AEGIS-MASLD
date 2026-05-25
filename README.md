@@ -42,7 +42,7 @@ GigaPath model loading requires a Hugging Face access token. Set it before runni
 export HF_TOKEN="YOUR_HUGGINGFACE_TOKEN"
 ```
 
-## 2. Prepare the Two-Case Demo Workspace
+## 2. Prepare the Demo Workspace
 
 Run the following Python snippet from the repository root. It creates a reproducible demo folder, links the four test slides, and defines where each downstream output should be written.
 
