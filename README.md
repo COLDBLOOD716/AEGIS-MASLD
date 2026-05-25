@@ -42,7 +42,7 @@ GigaPath model loading requires a Hugging Face access token. Set it before runni
 export HF_TOKEN="YOUR_HUGGINGFACE_TOKEN"
 ```
 
-## 2. Prepare the Two-Case Demo Workspace
+## 2. Prepare the Demo Workspace
 
 Run the following Python snippet from the repository root. It creates a reproducible demo folder, links the four test slides, and defines where each downstream output should be written.
 
@@ -391,7 +391,6 @@ demo_runs/two_case_demo/cell_segmentation/
 
 - Keep patient IDs consistent across WSI filenames, clinical rows, dynamic lifestyle CSV filenames, and output feature names.
 - The demo scripts currently use explicit path variables at the top of each file. Update those variables before running each step.
-- The saliency scripts expect WSI-level MLP classifier weights. They are separate from the Trans-LSTM longitudinal outcome models.
 - If CUDA is unavailable, change `torch.device("cuda")` or `device = "cuda"` to CPU, but WSI embedding and saliency steps will be much slower.
 - For large WSI files, keep tile and occlusion outputs on a drive with sufficient free space.
 - Set `HF_TOKEN` in the shell instead of hard-coding a private token in source code.

@@ -17,7 +17,7 @@ SLIDE_SVS = Path(r"path_to_svs")
 OUTPUT_BASE = Path(r"path_to_output")
 OUTPUT_BASE.mkdir(exist_ok=True)
 
-DISEASES = ['T2DM','Cirrhosis','CAD','Stroke','Heart Failure',
+DISEASES = ['T2DM','Cirrhosis','CAD','Stroke','Heart Failure', 'Death',
             'Arrhythmias','Dyslipidemia','PAD','CKD','Hypertension',
             'Hypothyroidism','PCOS','HCC']
 DISEASE_TO_PLOT = 'the_disease_you_want_to_plot'
