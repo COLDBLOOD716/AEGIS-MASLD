@@ -1,0 +1,14 @@
+DISEASES = [
+    "CAD",
+    "Stroke",
+    "PAD",
+    "CKD",
+    "Cirrhosis",
+    "HCC",
+    "T2DM.Insulin.Dependent",
+    "Hypothyroidism",
+    "PCOS",
+    "Heart.Failure",
+    "Arrhythmias",
+    "Extrahepatic.tumors",
+]
